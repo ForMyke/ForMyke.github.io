@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="public/css/styles.css" />
+    <script
+      src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+    <script src="./public/bundle.js" defer></script>
+    <style>
+      body {
+        padding-bottom: 50px; /* Adds padding to ensure the footer doesn't overlap */
+      }
+      .container {
+        margin-top: 20px;
+      }
+      p {
+        margin-bottom: 40px; /* Separates paragraphs by 40px */
+      }
+      footer img {
+        width: 30px; /* Adjusts the size of the footer icons */
+        margin: 0 10px; /* Adds space between the icons */
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="three-container"
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"
+    ></div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-10 text-center mt-5 mb-5">
+          <h1 class="display-4">Hola mi Nombre es Miguel Gomez</h1>
+          <p class="lead">
+            Solo un <span class="badge badge-primary">Desarrollador</span>
+          </p>
+          <button class="btn btn-outline-primary">Contacto</button>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-6">
+          <p>
+            Soy un desarrollador el cual de momento su enfoque principal es
+            frontend, sin embargo las tecnologías y el mercado laboral cambian,
+            es por eso que me mantengo en continuo aprendizaje tratando de
+            aprender más cada día, no solo en el ámbito técnico sino también en
+            el área entorno a las habilidades blandas.
+          </p>
+          <p>
+            Mi enfoque en frontend se basa en la librería de React ya que cuenta
+            con muchos métodos para poder hacer funciones de JS de una manera
+            más simple y concisa sin tener tanto código de esta manera siendo
+            mejor para corrección de bugs y errores de escalabilidad.
+          </p>
+          <p>
+            Algunos de mis proyectos se encuentran en mi
+            <a href="https://github.com/"
+              ><img src="path/to/github-icon.png" alt="GitHub" /></a
+            >.
+          </p>
+          <p>
+            Además, en mi continuo aprendizaje actualmente me encuentro
+            explorando la herramienta de <b>Azure</b> la cual pienso usar en un
+            futuro próximo para poder continuar con mis habilidades en este
+            mundo.
+          </p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-6 mt-5">
+          <form id="contact-form">
+            <div class="form-row">
+              <div class="form-group col-12">
+                <label for="name">Nombre</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Miguel Gomez"
+                  required
+                />
+              </div>
+              <div class="form-group col-12">
+                <label for="email">Correo</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="golomian16@gmail.com"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message">Mensaje</label>
+              <textarea
+                class="form-control"
+                id="message"
+                rows="4"
+                placeholder="Hola Miguel..."
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">
+              Contáctame
+            </button>
+          </form>
+        </div>
+      </div>
+      <footer class="text-center mt-5">
+        <a href="https://github.com/"
+          ><img src="path/to/github-icon.png" alt="GitHub"
+        /></a>
+        <a href="https://twitter.com/"
+          ><img src="path/to/twitter-icon.png" alt="Twitter"
+        /></a>
+        <a href="https://instagram.com/"
+          ><img src="path/to/instagram-icon.png" alt="Instagram"
+        /></a>
+        <a href="https://linkedin.com/"
+          ><img src="path/to/linkedin-icon.png" alt="LinkedIn"
+        /></a>
+      </footer>
+    </div>
+  </body>
+</html>
