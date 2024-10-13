@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -38,10 +38,23 @@
     ></div>
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-10 text-center mt-5 mb-5">
-          <h1 class="display-4">Hola soy Miguel Gomez</h1>
+        <div class="col-10 text-center">
+          <h1
+            id="titulo-animado"
+            class="display-4"
+            data-texto="Hola soy Miguel Gómez"
+          ></h1>
           <p class="lead">
-            Solo un <span class="badge badge-primary">Desarrollador</span>
+            Solo un
+            <span
+              class="badge badge-primary"
+              id="texto-dinamico"
+              data-texto="Desarrollador"
+            ></span>
+          </p>
+          <p>
+            En un mundo lleno de posibilidades infinitas, el código es la
+            herramienta que convierte ideas en realidad.
           </p>
           <button id="contact-button" class="btn btn-outline-primary">
             Contacto
@@ -51,45 +64,252 @@
       </div>
 
       <div class="row justify-content-center">
-        <div class="col-6">
-          <p>
-            Soy un desarrollador el cual de momento su enfoque principal es
-            frontend, sin embargo las tecnologías y el mercado laboral cambian,
-            es por eso que me mantengo en continuo aprendizaje tratando de
-            aprender más cada día, no solo en el ámbito técnico sino también en
-            el área entorno a las habilidades blandas.
+        <div class="col-8">
+          <!-- Cambié de col-6 a col-8 para un ancho mayor -->
+          <p class="centered-text">¿Quién soy?</p>
+          <p class="experience-text">
+            Desarrollador con experiencia en la creación de aplicaciones
+            multiplataforma y diseño de interfaces, además de un fuerte enfoque
+            en el desarrollo de soluciones en la nube. <br />
           </p>
-          <p>
-            Mi enfoque en frontend se basa en la librería de React ya que cuenta
-            con muchos métodos para poder hacer funciones de JS de una manera
-            más simple y concisa sin tener tanto código de esta manera siendo
-            mejor para corrección de bugs y errores de escalabilidad.
+          <p class="centered-text">Experiencia</p>
+          <p class="experience-text">
+            He trabajado en varios proyectos, creando aplicaciones eficientes y
+            fáciles de usar para múltiples plataformas, utilizando las últimas
+            tecnologías en desarrollo frontend y en la nube.
           </p>
-          <p>
-            Algunos de mis proyectos se encuentran en mi
-            <a href="https://github.com/" target="_blank">
+        </div>
+      </div>
+      <div class="col-8 container">
+        <div class="card bg-white p-4">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <div>
               <img
-                src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                alt="GitHub"
-                style="width: 30px; height: 30px; color: antiquewhite"
+                src="./img/train.png"
+                alt="Company Logo"
+                class="company-logo me-3"
               />
-            </a>
-          </p>
-          <p>
-            Además, en mi continuo aprendizaje actualmente me encuentro
-            explorando la herramienta de <b>Azure</b> la cual pienso usar en un
-            futuro próximo para poder continuar con mis habilidades en este
-            mundo.
-          </p>
+              <h3 class="d-inline">Train Bistro - Capturista de Datos</h3>
+            </div>
+            <p class="text-muted">Junio 05, 2022 - Enero 27, 2023</p>
+          </div>
+          <ul class="list-unstyled">
+            <li>
+              <strong>Capturista de datos</strong> con experiencia en el manejo
+              de requisiciones de cada área con un manejo del
+              <strong>flujo de trabajo</strong> eficiente en las áreas.
+            </li>
+            <li>
+              Experiencia en el manejo de la interfaz del sistema de
+              <strong>Train Bistro</strong> para llevar el control de los
+              productos de la mejor manera.
+            </li>
+            <li>
+              <strong>Interacción</strong> con el sistema de captura de datos,
+              ayudando además en su renovación y mejora de eficiencia.
+            </li>
+            <li>
+              Optimización del rendimiento, tamaño y escalabilidad de
+              aplicaciones.
+            </li>
+            <li>
+              Trabajo con bases de datos para asegurar un manejo eficiente de la
+              información.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-8 container">
+        <div class="card bg-white p-4">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <div>
+              <img
+                src="./img/clic.png"
+                alt="Company Logo"
+                class="company-logo me-3"
+              />
+              <h3 class="d-inline">Clic Safe - Developer</h3>
+            </div>
+            <p class="text-muted">Agosto 25, 2023 - Agosto 27, 2024</p>
+          </div>
+          <ul class="list-unstyled">
+            <li>
+              <strong>Desarrollo</strong> de una aplicación web para una
+              guardería, llevando a cabo el desarrollo de las bases de datos y
+              la interfaz, además de la interacción con el cliente para asegurar
+              el cumplimiento de los requisitos.
+            </li>
+            <li>
+              <strong>Desarrollo</strong> de la aplicación web de alta calidad,
+              responsiva y <strong>amigable para el usuario</strong>.
+            </li>
+
+            <li>
+              Construcción de aplicaciones web y móviles orientadas al cliente.
+            </li>
+            <li>
+              Revisión del código de nuevos empleados y ayuda en su proceso de
+              integración.
+            </li>
+            <li>
+              Apoyo al equipo de backend agregando nuevos puntos de conexión,
+              funciones y tipos faltantes.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="container mt-5">
+            <h2 class="text-center mb-4">Proyectos y Actividades</h2>
+            <div class="row">
+              <!-- Tarjeta 1 -->
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div
+                  class="card text-center p-3 shadow-lg"
+                  style="background-color: #2c2f38; color: #f4f4f4"
+                >
+                  <img
+                    src="./img/escom.png"
+                    class="card-img-top mx-auto"
+                    alt="Logo Proyecto 1"
+                    style="width: 180px"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      Calculadora Cálculo Aplicado ExpoEscom
+                    </h5>
+                    <p class="card-text">
+                      Calculadora gráfica para la materia de Cálculo Aplicado
+                      desarrollada en un entorno python con la ayuda de 3
+                      desarrolladores más, presentada durante ExpoEscom 2023-1.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tarjeta 2 -->
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div
+                  class="card text-center p-3 shadow-lg"
+                  style="background-color: #2c2f38; color: #f4f4f4"
+                >
+                  <img
+                    src="./img/hockey.png"
+                    class="card-img-top mx-auto"
+                    alt="Logo Proyecto 2"
+                    style="width: 195px"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Hockey</h5>
+                    <p class="card-text">
+                      Jugador amateur de Hockey en Osos Negros, desde diciembre
+                      del 2023.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tarjeta 3 -->
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div
+                  class="card text-center p-3 shadow-lg"
+                  style="background-color: #2c2f38; color: #f4f4f4"
+                >
+                  <img
+                    src="./img/theejs.png"
+                    class="card-img-top mx-auto"
+                    alt="Logo Proyecto 3"
+                    style="width: 170px"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Entusiasta Three.js</h5>
+                    <p class="card-text">
+                      Desarrollo de modelados en web con el apoyo de Three.js
+                      para de esta manera poder enganchar al usuario.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tarjeta 4 -->
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div
+                  class="card text-center p-3 shadow-lg"
+                  style="background-color: #2c2f38; color: #f4f4f4"
+                >
+                  <img
+                    src="./img/cloud.png"
+                    class="card-img-top mx-auto"
+                    alt="Logo Proyecto 4"
+                    style="width: 150px"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Cloud</h5>
+                    <p class="card-text">
+                      Estudio de uso y entendimiento de herramientas de la nube
+                      para poder automatizar procesos, esto con un inicio con
+                      GitHub, Linux y cloud (AWS y Google Cloud).
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Tarjeta 5 -->
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div
+                  class="card text-center p-3 shadow-lg"
+                  style="background-color: #2c2f38; color: #f4f4f4"
+                >
+                  <img
+                    src="./img/atleee.png"
+                    class="card-img-top mx-auto"
+                    alt="Logo Proyecto 4"
+                    style="width: 155px"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Atletismo</h5>
+                    <p class="card-text">
+                      Apasionado de la práctica de atletismo en carreras de
+                      larga duración, con el objetivo de ganar competencias y
+                      mantener una buena salud física y mental.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Tarjeta 6 -->
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div
+                  class="card text-center p-3 shadow-lg"
+                  style="background-color: #2c2f38; color: #f4f4f4"
+                >
+                  <img
+                    src="./img/cruz.png"
+                    class="card-img-top mx-auto"
+                    alt="Logo Proyecto 4"
+                    style="width: 275px"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Sistema Médico</h5>
+                    <p class="card-text">
+                      Desarrollo de un sistema médico para la gestión de
+                      actividades y procesos dentro de un hospital.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="row justify-content-center">
+        <p class="centered-text">Contacto</p>
         <div class="col-6 mt-5">
           <form
             id="contact-form"
             action="https://formsubmit.co/golomian16@hotmail.com"
             method="POST"
+            novalidate
           >
             <input
               type="hidden"
@@ -109,7 +329,7 @@
                   type="text"
                   class="form-control"
                   id="name"
-                  placeholder="Miguel Gomez"
+                  placeholder="Miguel Gómez"
                   required
                 />
               </div>
@@ -156,7 +376,7 @@
         </a>
         <a href="https://twitter.com/" target="_blank">
           <img
-            src="https://cdn-icons-png.flaticon.com/512/733/733579.png"
+            src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png"
             alt="Twitter"
           />
         </a>
@@ -176,6 +396,5 @@
     </div>
 
     <script src="public/bundle.js" defer></script>
-    <!-- Cargar el bundle.js generado por Rollup -->
   </body>
 </html>

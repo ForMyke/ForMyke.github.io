@@ -96,3 +96,50 @@ form {
     transform: translateY(0);
   }
 }
+.centered-text {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.experience-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+.company-logo {
+  width: 50px;
+  height: auto;
+}
+
+.experience-list li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.experience-list li strong {
+  color: #ffdd57; /* Color de las palabras resaltadas */
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  color: #00acee; /* Color para el título */
+}
+
+.text-muted {
+  color: #aaa !important; /* Color de las fechas */
+}
+
+.company-logo {
+  width: 100px;
+  height: auto;
+}
+
+body {
+  overflow-x: hidden;
+}

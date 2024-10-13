@@ -1298,8 +1298,8 @@ void main() {
 	const threeFigureExpanded = color => {
 	  const container = document.getElementById("three-container");
 	  const scene = new Scene();
-	  const camera = new PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 2000);
-	  camera.position.z = 5;
+	  const camera = new PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.8, 4000);
+	  camera.position.z = 4;
 	  const renderer = new WebGLRenderer({
 	    alpha: true
 	  });
@@ -1360,11 +1360,13 @@ void main() {
 	    if (!name || !email || !message) {
 	      Swal.fire({
 	        icon: "error",
-	        title: "Algo anda mal",
-	        text: "Por favor completa todos los campos!"
+	        title: "Algo no anda bien",
+	        text: "Por favor completa todos los campos"
 	      });
 	      return; // Si falta algún campo, se detiene el proceso
 	    }
+
+	    // Si la validación es exitosa, muestra el SweetAlert de éxito y envía el formulario
 	    let form = document.getElementById("contact-form"); // Referencia al formulario
 	    let timerInterval;
 	    Swal.fire({
@@ -1391,10 +1393,53 @@ void main() {
 	  });
 	}
 
+	// Animación de escritura gradual
+	const animacion = elemento => {
+	  const numeroLetras = elemento.dataset.texto.length;
+	  for (let i = 0; i < numeroLetras; i++) {
+	    setTimeout(() => {
+	      const letra = document.createElement("span");
+	      letra.append(elemento.dataset.texto[i]);
+	      elemento.append(letra);
+	    }, 300 * i);
+	  }
+	};
+
+	// Animación cíclica de textos
+	const animacionCiclica = (elemento, textos) => {
+	  let indexTexto = 0;
+	  let indexLetra = 0;
+	  const escribirTexto = () => {
+	    if (indexLetra < textos[indexTexto].length) {
+	      elemento.innerHTML += textos[indexTexto][indexLetra];
+	      indexLetra++;
+	      setTimeout(escribirTexto, 150); // Tiempo entre letras
+	    } else {
+	      setTimeout(borrarTexto, 1000); // Pausa antes de borrar
+	    }
+	  };
+	  const borrarTexto = () => {
+	    if (indexLetra > 0) {
+	      elemento.innerHTML = textos[indexTexto].substring(0, indexLetra - 1);
+	      indexLetra--;
+	      setTimeout(borrarTexto, 100); // Tiempo entre letras al borrar
+	    } else {
+	      indexTexto = (indexTexto + 1) % textos.length; // Cambiar al siguiente texto
+	      setTimeout(escribirTexto, 500); // Pausa antes de escribir el nuevo texto
+	    }
+	  };
+	  escribirTexto(); // Iniciar la animación
+	};
+
 	//Renderizado usando rollup para los modulos
 	document.addEventListener("DOMContentLoaded", () => {
 	  threeFigureExpanded(0xffffff);
 	  initializeFormBehavior();
+	  const titulo = document.getElementById("titulo-animado");
+	  animacion(titulo);
+	  const textos = ["Desarrollador", "Estudiante", "Cloud Beginner Engineer"];
+	  const textoDinamico = document.getElementById("texto-dinamico");
+	  animacionCiclica(textoDinamico, textos);
 	});
 
 })();

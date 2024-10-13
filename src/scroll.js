@@ -23,12 +23,13 @@ export function initializeFormBehavior() {
       if (!name || !email || !message) {
         Swal.fire({
           icon: "error",
-          title: "Algo anda mal",
-          text: "Por favor completa todos los campos!",
+          title: "Algo no anda bien",
+          text: "Por favor completa todos los campos",
         });
         return; // Si falta algún campo, se detiene el proceso
       }
 
+      // Si la validación es exitosa, muestra el SweetAlert de éxito y envía el formulario
       let form = document.getElementById("contact-form"); // Referencia al formulario
       let timerInterval;
       Swal.fire({
